@@ -1,0 +1,2 @@
+---
+:enabled: <%= smartproxy_dhcp_enabled %>

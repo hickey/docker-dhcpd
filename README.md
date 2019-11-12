@@ -1,7 +1,5 @@
-Docker image for ISC DHCP server
-================================
-
-[![](https://images.microbadger.com/badges/image/networkboot/dhcpd.svg)](https://microbadger.com/images/networkboot/dhcpd "See more networkboot/dhcpd image details")
+Docker image for ISC DHCP server with Foreman SmartProxy
+========================================================
 
 This Docker image is suitable for running a DHCP server for your docker host
 network.  It uses ISC DHCP server which is bundled with the latest Ubuntu

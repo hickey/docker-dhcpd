@@ -1,0 +1,13 @@
+---
+:settings_directory: "/etc/foreman-proxy/settings.d"
+:trusted_hosts: []
+:daemon: true
+:bind_host:
+  - '*'
+:https_port: 8443
+:log_file: /var/log/foreman-proxy/proxy.log
+:log_level: <%= smartproxy_log_level %>
+:ssl_certificate: /etc/puppetlabs/puppet/ssl/certs/<%= hostname %>.pem
+:ssl_ca_file: /etc/puppetlabs/puppet/ssl/certs/ca.pem
+:ssl_private_key: /etc/puppetlabs/puppet/ssl/private_keys/<%= hostname %>.pem
+:foreman_url: <%= foreman_url %>

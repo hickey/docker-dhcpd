@@ -2,13 +2,12 @@
 
 set -e
 
+init="/usr/bin/dumb-init"
 
-# Support docker run --init parameter which obsoletes the use of dumb-init,
-# but support dumb-init for those that still use it without --init
-if [ -x "/dev/init" ]; then
-    run="exec"
-else
-    run="exec /usr/bin/dumb-init --"
+# Startup the Foreman smartproxy
+# SMARTPROXY=true
+if test -n "${SMARTPROXY}" ; then
+  /opt/puppetlabs/puppet/bin/ruby /usr/share/foreman-proxy/bin/smart-proxy
 fi
 
 # Single argument to command line is interface name
